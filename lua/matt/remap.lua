@@ -23,10 +23,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- When pasting over existing text in the buffer
 -- you will not lose what is in the paste register
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>pp", [["_dP]])
 
 -- Same as above but for delete
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>pp", [["_dP]])
 
 
 -- Yanks to system clipboard

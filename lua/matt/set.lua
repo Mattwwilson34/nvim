@@ -1,5 +1,10 @@
--- Block cursor in insert mode
-vim.opt.guicursor = ""
+-- Color highlights
+vim.opt.hlsearch = true
+
+-- Set highlight colors
+vim.cmd([[
+  highlight Search guibg='red' guifg='red'
+]])
 
 -- Line and Relative line numbers
 vim.opt.nu = true
