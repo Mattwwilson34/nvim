@@ -31,7 +31,9 @@ return require('packer').startup(function(use)
   use('nvim-lua/plenary.nvim')
   use('ThePrimeagen/harpoon')
 
-  --  nvim-treesitter 
+  -- Nvim Tree
+  use('nvim-tree/nvim-tree.lua')
+  use('nvim-tree/nvim-web-devicons')
 
   -- Undotree
   use('mbbill/undotree')
@@ -45,6 +47,15 @@ return require('packer').startup(function(use)
   -- Highlights color codes
   use('norcalli/nvim-colorizer.lua')
 
+  -- Which key
+  -- Shows popup with keymaps
+  use({
+      "folke/which-key.nvim",
+      config = function()
+          vim.o.timeout = true
+          vim.o.timeoutlen = 300
+      end
+  })
 
   -- LSP
   use {

@@ -1,10 +1,7 @@
--- Color highlights
-vim.opt.hlsearch = true
-
--- Set highlight colors
-vim.cmd([[
-  highlight Search guibg='red' guifg='red'
-]])
+-- disable netrw at the start
+-- prevents race conditions with nvimtree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Line and Relative line numbers
 vim.opt.nu = true
@@ -25,8 +22,14 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
+-- Highlights all text that matches
+vim.opt.hlsearch = true
+
+-- Highlights while typeing search terms
 vim.opt.incsearch = true
+
+-- Changes highlight color for visibility
+vim.cmd('hi IncSearch guibg=#d75f00 guifg=white')
 
 vim.opt.termguicolors = true
 

@@ -1,6 +1,3 @@
--- NetRW
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 -- Escape
 vim.keymap.set("i", "jj", "<Esc>")
 
@@ -47,3 +44,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Turns scripts like bash scripts into executables
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- Search highlights
+vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { silent = true })
