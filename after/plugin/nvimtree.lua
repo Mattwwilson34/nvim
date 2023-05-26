@@ -25,7 +25,7 @@ tree.setup({
         side = "left",
         preserve_window_proportions = false,
         number = false,
-        relativenumber = false,
+        relativenumber = true,
         signcolumn = "yes",
         mappings = {
             custom_only = false,
@@ -243,5 +243,3 @@ tree.setup({
 })
 
 vim.keymap.set("n", "<leader>e", function() api.tree.toggle() end)
-
-
