@@ -70,6 +70,9 @@ return require("packer").startup(function(use)
 	-- Auto HTML Tags
 	use("windwp/nvim-ts-autotag")
 
+	-- Vim Surround
+	use("tpope/vim-surround")
+
 	-- Lua Snip
 	use({
 		"L3MON4D3/LuaSnip",
@@ -79,8 +82,8 @@ return require("packer").startup(function(use)
 		run = "make install_jsregexp",
 	})
 
-    -- GitHub Copilot
-    use("github/copilot.vim")
+	-- GitHub Copilot
+	use("github/copilot.vim")
 
 	-- Null-ls
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -108,4 +111,18 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+
+
+    -- CMP
+    use ({
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-nvim-lua",
+            "L3MON4D3/LuaSnip",
+            "onsails/lspkind-nvim",
+        }
+    })
 end)
