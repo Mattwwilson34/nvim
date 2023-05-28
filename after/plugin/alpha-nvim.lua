@@ -47,6 +47,8 @@ dashboard.section.buttons.val = {
     dashboard.button( "q", "  > Quit neovim", ":qa<CR>"),
 }
 
+dashboard.section.header.opts.hl = "String"
+
 -- Send config to alpha
 alpha.setup(dashboard.opts)
 

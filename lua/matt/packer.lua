@@ -49,7 +49,6 @@ return require("packer").startup(function(use)
 	use("norcalli/nvim-colorizer.lua")
 
 	-- Which key
-	-- Shows popup with keymaps
 	use({
 		"folke/which-key.nvim",
 		config = function()
@@ -70,8 +69,14 @@ return require("packer").startup(function(use)
 	-- Auto HTML Tags
 	use("windwp/nvim-ts-autotag")
 
+    -- Trouble
+    use("folke/trouble.nvim")
+
 	-- Vim Surround
 	use("tpope/vim-surround")
+
+    -- Multi-line
+    use("Rasukarusan/nvim-select-multi-line")
 
 	-- Lua Snip
 	use({
@@ -80,6 +85,12 @@ return require("packer").startup(function(use)
 		tag = "v1.0.0", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!:).
 		run = "make install_jsregexp",
+	})
+
+	-- Neogen
+	use({
+		"danymat/neogen",
+		requires = "nvim-treesitter/nvim-treesitter",
 	})
 
 	-- GitHub Copilot
@@ -112,17 +123,16 @@ return require("packer").startup(function(use)
 		},
 	})
 
-
-    -- CMP
-    use ({
-        "hrsh7th/nvim-cmp",
-        requires = {
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-path",
-            "hrsh7th/cmp-nvim-lua",
-            "L3MON4D3/LuaSnip",
-            "onsails/lspkind-nvim",
-        }
-    })
+	-- CMP
+	use({
+		"hrsh7th/nvim-cmp",
+		requires = {
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-nvim-lua",
+			"L3MON4D3/LuaSnip",
+			"onsails/lspkind-nvim",
+		},
+	})
 end)

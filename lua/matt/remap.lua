@@ -33,17 +33,20 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- Formats current buffer
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
--- Quick fix navigation
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
 -- Start search and replace with the current word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Turns scripts like bash scripts into executables
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>ex", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Search highlights
 vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { silent = true })
+
+-- Vertical help search snippet
+vim.keymap.set("n", "<leader>vh", ":vert h ", {silent = true})
+
+-- Open Terminal
+vim.keymap.set("n", "<leader>tn", ":terminal<CR>i")
+
+-- Lazy Git
+vim.keymap.set("n", "<leader>lg", ":terminal<CR>iLazygit<CR>")

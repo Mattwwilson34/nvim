@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neogen = {
+    loaded = true,
+    path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/neogen",
+    url = "https://github.com/danymat/neogen"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
@@ -193,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-select-multi-line"] = {
+    loaded = true,
+    path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/nvim-select-multi-line",
+    url = "https://github.com/Rasukarusan/nvim-select-multi-line"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -233,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   undotree = {
     loaded = true,
