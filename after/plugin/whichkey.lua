@@ -43,6 +43,8 @@ wk.register({
 	p = {
 		name = "file find and paste", -- optional group name
 		f = { "Find all files" },
+        g = { "Find all git files" },
+        k = { "Find all keymaps" },
 		s = { "grep current files" },
 		p = { "Paste deleted/copied text" },
 	},

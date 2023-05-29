@@ -1,10 +1,12 @@
 -- Escape
 vim.keymap.set("i", "jj", "<Esc>")
 
+-- echo hello when pressing control + 
+vim.keymap.set("n", "<C-j>", "<cmd>echo 'hello'<CR>")
+
 -- Move selected text around in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 
 -- Appends current line to the line above it
 vim.keymap.set("n", "J", "mzJ`z")
@@ -12,7 +14,6 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- Keeps cursor in the middle when moving up/down page
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
 
 -- Keeps search term in the middle when moving between highlights
 vim.keymap.set("n", "n", "nzzzv")
@@ -24,7 +25,6 @@ vim.keymap.set("x", "<leader>pp", [["_dP]])
 
 -- Same as above but for delete
 vim.keymap.set("x", "<leader>pp", [["_dP]])
-
 
 -- Yanks to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -43,7 +43,7 @@ vim.keymap.set("n", "<leader>ex", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { silent = true })
 
 -- Vertical help search snippet
-vim.keymap.set("n", "<leader>vh", ":vert h ", {silent = true})
+vim.keymap.set("n", "<leader>vh", ":vert h ", { silent = true })
 
 -- Open Terminal
 vim.keymap.set("n", "<leader>tn", ":terminal<CR>i")

@@ -22,6 +22,9 @@ return require("packer").startup(function(use)
 	-- Neovim startup screen
 	use({ "goolord/alpha-nvim" })
 
+	-- Window navigation with h,j,k,l
+	use("christoomey/vim-tmux-navigator")
+
 	-- Treesitter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
@@ -69,14 +72,14 @@ return require("packer").startup(function(use)
 	-- Auto HTML Tags
 	use("windwp/nvim-ts-autotag")
 
-    -- Trouble
-    use("folke/trouble.nvim")
+	-- Trouble
+	use("folke/trouble.nvim")
 
 	-- Vim Surround
 	use("tpope/vim-surround")
 
-    -- Multi-line
-    use("Rasukarusan/nvim-select-multi-line")
+	-- Multi-line
+	use("Rasukarusan/nvim-select-multi-line")
 
 	-- Lua Snip
 	use({
@@ -92,6 +95,9 @@ return require("packer").startup(function(use)
 		"danymat/neogen",
 		requires = "nvim-treesitter/nvim-treesitter",
 	})
+
+	-- Tmux
+	use({ "aserowy/tmux.nvim" })
 
 	-- GitHub Copilot
 	use("github/copilot.vim")

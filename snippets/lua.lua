@@ -57,6 +57,7 @@ local function cs(trigger, nodes, opts) --{{{
 					group = group,
 					callback = function()
 						vim.keymap.set(keymap[1], keymap[2], function()
+
 							ls.snip_expand(snippet)
 						end, { noremap = true, silent = true, buffer = true })
 					end,

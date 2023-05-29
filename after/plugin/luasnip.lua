@@ -11,9 +11,9 @@ ls.config.set_config({
 	enable_autosnippets = true,
 })
 
-local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-keymap("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-keymap("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-keymap("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
-keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+
+vim.keymap.set("i", "<c-J>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+vim.keymap.set("s", "<c-J>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+vim.keymap.set("i", "<c-K>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+vim.keymap.set("s", "<c-K>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
