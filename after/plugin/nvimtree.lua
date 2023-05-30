@@ -51,8 +51,8 @@ tree.setup({
         group_empty = false,
         highlight_git = false,
         full_name = false,
-        highlight_opened_files = "all",
-        highlight_modified = "all",
+        highlight_opened_files = "none",
+        highlight_modified = "none",
         root_folder_label = ":~:s?$?/..?",
         indent_width = 2,
         indent_markers = {
@@ -113,7 +113,7 @@ tree.setup({
         auto_open = true,
     },
     update_focused_file = {
-        enable = false,
+        enable = true,
         update_root = false,
         ignore_list = {},
     },
