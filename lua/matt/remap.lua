@@ -50,3 +50,7 @@ vim.keymap.set("n", "<leader>tn", ":terminal<CR>i")
 
 -- Lazy Git
 vim.keymap.set("n", "<leader>lg", ":terminal<CR>iLazygit<CR>")
+
+
+vim.keymap.set("n", "<c-l>", ": echo 'hello'<CR>")
+
