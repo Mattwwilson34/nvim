@@ -45,6 +45,18 @@ return require("packer").startup(function(use)
 	-- Git Fugitive
 	use("tpope/vim-fugitive")
 
+	-- Lazy Git
+	use({
+		"kdheepak/lazygit.nvim",
+		requires = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("telescope").load_extension("lazygit")
+		end,
+	})
+
 	-- Easy commenting
 	use("numToStr/Comment.nvim")
 

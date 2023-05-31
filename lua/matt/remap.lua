@@ -1,9 +1,6 @@
 -- Escape
 vim.keymap.set("i", "jj", "<Esc>")
 
--- echo hello when pressing control + 
-vim.keymap.set("n", "<C-j>", "<cmd>echo 'hello'<CR>")
-
 -- Move selected text around in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -48,9 +45,17 @@ vim.keymap.set("n", "<leader>vh", ":vert h ", { silent = true })
 -- Open Terminal
 vim.keymap.set("n", "<leader>tn", ":terminal<CR>i")
 
--- Lazy Git
-vim.keymap.set("n", "<leader>lg", ":terminal<CR>iLazygit<CR>")
+-- Define a function to execute the Python command
+local function run_python_file()
+  -- Get the path of the current file
+  local file_path = vim.fn.expand('%:p')
 
+  -- Open a new Tmux horizontal split
+  vim.cmd('silent !tmux split-window -h')
 
-vim.keymap.set("n", "<c-l>", ": echo 'hello'<CR>")
+  -- Paste the current file path and run the Python command
+  vim.fn.feedkeys(':term python3 ' .. file_path .. '<CR>', 'n')
+end
+
+vim.api.nvim_set_keymap('n', '<leader>cp', ':lua vim.fn.setreg("+", vim.fn.expand("%:p"))<CR>', { noremap = true, silent = true })
 

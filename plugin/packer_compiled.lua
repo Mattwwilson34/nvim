@@ -139,6 +139,12 @@ _G.packer_plugins = {
     path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lazygit.nvim"] = {
+    config = { "\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\flazygit\19load_extension\14telescope\frequire\0" },
+    loaded = true,
+    path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lightline.vim"] = {
     loaded = true,
     path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/lightline.vim",
@@ -220,6 +226,7 @@ _G.packer_plugins = {
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-ufo"] = {
+    config = { "\27LJ\2\n‚\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1c\0=\1\4\0006\0\0\0009\0\1\0)\1c\0=\1\5\0006\0\0\0009\0\1\0+\1\2\0=\1\6\0K\0\1\0\15foldenable\19foldlevelstart\14foldlevel\0061\15foldcolumn\6o\bvim\0" },
     loaded = true,
     path = "/Users/matthewwilson/.local/share/nvim/site/pack/packer/start/nvim-ufo",
     url = "https://github.com/kevinhwang91/nvim-ufo"
@@ -297,6 +304,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: lazygit.nvim
+time([[Config for lazygit.nvim]], true)
+try_loadstring("\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\flazygit\19load_extension\14telescope\frequire\0", "config", "lazygit.nvim")
+time([[Config for lazygit.nvim]], false)
+-- Config for: nvim-ufo
+time([[Config for nvim-ufo]], true)
+try_loadstring("\27LJ\2\n‚\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1c\0=\1\4\0006\0\0\0009\0\1\0)\1c\0=\1\5\0006\0\0\0009\0\1\0+\1\2\0=\1\6\0K\0\1\0\15foldenable\19foldlevelstart\14foldlevel\0061\15foldcolumn\6o\bvim\0", "config", "nvim-ufo")
+time([[Config for nvim-ufo]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
