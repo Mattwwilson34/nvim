@@ -45,17 +45,5 @@ vim.keymap.set("n", "<leader>vh", ":vert h ", { silent = true })
 -- Open Terminal
 vim.keymap.set("n", "<leader>tn", ":terminal<CR>i")
 
--- Define a function to execute the Python command
-local function run_python_file()
-  -- Get the path of the current file
-  local file_path = vim.fn.expand('%:p')
-
-  -- Open a new Tmux horizontal split
-  vim.cmd('silent !tmux split-window -h')
-
-  -- Paste the current file path and run the Python command
-  vim.fn.feedkeys(':term python3 ' .. file_path .. '<CR>', 'n')
-end
-
-vim.api.nvim_set_keymap('n', '<leader>cp', ':lua vim.fn.setreg("+", vim.fn.expand("%:p"))<CR>', { noremap = true, silent = true })
-
+-- Run current buffer with python in tmux horizontal split
+vim.keymap.set("n", "<leader>r", ":silent !tmux split-window 'python3 %; read'<CR>", { silent = true })
